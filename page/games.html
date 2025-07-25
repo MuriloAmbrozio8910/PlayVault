@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameDeals - Descontos Imperdíveis em Jogos</title>
+    <meta name="description" content="Encontre os melhores descontos em jogos para PC, PlayStation, Xbox e muito mais!">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">GameDeals</span>
+                </div>
+                
+                <nav class="nav desktop-only">
+                    <a href="../index.html" class="nav-link">Início</a>
+                    <a href="games.html" class="nav-link">Promoções</a>
+                    <a href="#" class="nav-link">Contato</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar jogos..." class="search-input" id="searchInput">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                    <button class="icon-btn notification-btn">
+                        🔔
+                        <span class="badge">2</span>
+                    </button>
+                    <button class="mobile-menu-btn mobile-only" id="mobileMenuBtn">☰</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="../index.html" class="mobile-nav-link">Início</a>
+            <a href="games.html" class="mobile-nav-link">Promoções</a>
+            <a href="#" class="mobile-nav-link">Contato</a>
+        </div>
+    </div>
+
+    <!-- Game Grid Section -->
+    <section class="hero games-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Todos os Jogos em promoção</h2>
+                <div class="filters">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">Todos</button>
+                        <button class="filter-tab" data-filter="best-deals">Melhores Ofertas</button>
+                        <button class="filter-tab" data-filter="new-releases">Lançamentos</button>
+                    </div>
+                    <div class="sort-dropdown">
+                        <select id="sortSelect" class="sort-select">
+                            <option value="discount">Maior Desconto</option>
+                            <option value="price-low">Menor Preço</option>
+                            <option value="price-high">Maior Preço</option>
+                            <option value="rating">Melhor Avaliação</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="games-grid" id="AllgamesGrid">
+                <!-- Games will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2 class="newsletter-title">Não Perca Nenhuma Oferta!</h2>
+                    <p class="newsletter-description">
+                        Receba as melhores promoções de jogos diretamente no seu email. 
+                        Seja o primeiro a saber sobre descontos exclusivos.
+                    </p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Seu melhor email" class="newsletter-input" required>
+                        <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                    </div>
+                    <p class="newsletter-disclaimer">
+                        Prometemos não enviar spam. Você pode cancelar a inscrição a qualquer momento.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🎮</span>
+                        <span class="logo-text">GameDeals</span>
+                    </div>
+                    <p class="footer-description">
+                        Sua plataforma confiável para encontrar os melhores descontos em jogos. 
+                        Economize dinheiro e jogue mais!
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">🎵</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Sobre Nós</a></li>
+                        <li><a href="#" class="footer-link">Como Funciona</a></li>
+                        <li><a href="games.html" class="footer-link">Promoções</a></li>
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Suporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Central de Ajuda</a></li>
+                        <li><a href="#" class="footer-link">Contato</a></li>
+                        <li><a href="#" class="footer-link">Política de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Termos de Uso</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 GameDeals. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="games.js"></script>
+</body>
+</html>

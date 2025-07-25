@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         const selected = { ...game };
         // Mantém o UUID original do deal.id
         localStorage.setItem('selectedGame', JSON.stringify(selected));
-        window.location.href = 'game.html';
+        window.location.href = '/page/game.html';
       }
     }
   });

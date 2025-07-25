@@ -3,7 +3,7 @@ let gamesData = [];
 async function fetchGamesFromAPI() {
     showLoading();
     try {
-        const response = await fetch('/api/itad/deals');
+        const response = await fetch('/api/itad/games');
         const data = await response.json();
         gamesData = (data && data.list) ? data.list.map(deal => {
             const price = deal.deal && deal.deal.price ? deal.deal.price.amount : null;
